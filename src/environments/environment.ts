@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  JCDDECAUX_API_ROOT: 'https://api.jcdecaux.com/',
+  // \todo add private key
+  JCDECAUX_API_key: 'clef perso à changer'
 };
 
 /*
