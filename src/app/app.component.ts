@@ -24,9 +24,8 @@ export class AppComponent implements OnInit {
         this.contratsArray = val;
       },
       error => {
-        console.log('error ');
-      },
-      () => console.log('complet!')
+        console.log('error ' + error.toString());
+      }
     );
   }
 }

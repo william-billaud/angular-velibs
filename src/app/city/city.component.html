@@ -1,0 +1,8 @@
+
+
+
+
+<li *ngFor="let station of stations | async">
+  <a [routerLink]="['/ville',station.contract_name,'stations',station.number]">{{station.name}}</a>
+</li>
+
