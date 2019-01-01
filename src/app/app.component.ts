@@ -9,23 +9,11 @@ import {ContratsModel} from './contrats-model';
 })
 export class AppComponent implements OnInit {
   title = 'angular-velibs';
-  contratsArray: ContratsModel[];
-  constructor(private jcdecauxservice: JcdecauxService) {
+  constructor() {
   }
 
   ngOnInit() {
-    console.log('initialisation de l app');
-    this.getContractList();
   }
 
-  private getContractList(): void {
-    this.jcdecauxservice.getContrats().subscribe(
-      val => {
-        this.contratsArray = val;
-      },
-      error => {
-        console.log('error ' + error.toString());
-      }
-    );
-  }
+
 }

@@ -1,0 +1,9 @@
+<label>
+  <select [(ngModel)]="choix">
+    <option *ngFor="let contrat of contratsArray"
+            [value]="contrat.name">
+      {{contrat.name}} {{contrat.country_code}} : {{contrat.commercial_name}}
+    </option>
+  </select>
+</label>
+<button type="button" (click)="validation()">validate</button>
