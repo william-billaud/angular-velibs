@@ -1,9 +1,16 @@
-<label>
-  <select [(ngModel)]="choix">
-    <option *ngFor="let contrat of contratsArray"
-            [value]="contrat.name">
-      {{contrat.name}} {{contrat.country_code}} : {{contrat.commercial_name}}
-    </option>
-  </select>
-</label>
-<button type="button" (click)="validation()">validate</button>
+<form>
+  <div class="form-group">
+    <label class="custom-control-label" for="contrat"> Ville :
+      <select [(ngModel)]="choix" class="form-control" id="contrat" [ngModelOptions]="{standalone: true}">
+        <option *ngFor="let contrat of contratsArray"
+                [value]="contrat.name">
+          {{contrat.name}} {{contrat.country_code}} : {{contrat.commercial_name}}
+        </option>
+      </select>
+    </label>
+  </div>
+    <div class="form-group">
+      <button class="btn btn-primary" id="buttonC" type="button" (click)="validation()">valider
+      </button>
+    </div>
+</form>

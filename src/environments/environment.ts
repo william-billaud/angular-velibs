@@ -5,8 +5,7 @@
 export const environment = {
   production: false,
   JCDDECAUX_API_ROOT: 'https://api.jcdecaux.com/',
-  // \todo add private key
-  JCDECAUX_API_key: 'clef perso à changer'
+  JCDECAUX_API_key: '\todo changer clef api'
 };
 
 /*

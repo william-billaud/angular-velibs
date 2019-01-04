@@ -1,11 +1,17 @@
-<app-contrat></app-contrat>
-
-<label>
-  <select [(ngModel)]="choix">
-    <option *ngFor="let station of stations | async"
-            [value]="station.number">
-      {{station.name}}
-    </option>
-  </select>
-</label>
-<button type="button" (click)="validation()">validate</button>
+<app-contrat xmlns="http://www.w3.org/1999/html"></app-contrat>
+<form>
+  <div class="form-group">
+    <label class="custom-control-label" for="station"> Station :
+    <select [(ngModel)]="choix" class="form-control" id="station" [ngModelOptions]="{standalone: true}">
+      <option *ngFor="let station of stations | async"
+              [value]="station.number">
+        {{station.name}}
+      </option>
+    </select>
+  </label>
+  </div>
+    <div class="form-group">
+      <button class="btn btn-primary" type="button" (click)="validation()">valider
+      </button>
+    </div>
+</form>
